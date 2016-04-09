@@ -27,6 +27,7 @@ gitlab-ce:
   file.managed:
     - source: salt://gitlab.rb
     - mode: 644
+    - template: jinja
 
 gitlab-ctl reconfigure 2>&1 | tee /tmp/gitlab-reconfigure:
   cmd.wait:
